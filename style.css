@@ -1,6 +1,7 @@
 body {
 
 	font-family: 'Happy Monkey', cursive;
+	background-color: #FFB266;
 	
 }
 
@@ -25,7 +26,10 @@ nav ul li {
 .container {
 	
 	width: 900px;
+	height: 1000px;
 	margin: auto;
+	background-color: #FF9933;
+	padding: 10px;
 	
 }
 
