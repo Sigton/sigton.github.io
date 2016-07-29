@@ -2,6 +2,7 @@ body {
 
 	font-family: 'Happy Monkey', cursive;
 	background-color: #FFB266;
+	font-size: 18px;
 	
 }
 
@@ -42,11 +43,37 @@ nav ul li {
 h1 {
 	
 	text-align: center;
+	font-family: 'Iceland';
+	font-size: 40px;
 	
 }
 
 a {
 	
 	color: #000000;
+	
+}
+
+p {
+	
+	text-align: justify;
+	
+}
+
+.logo {
+	
+	width: 250px;
+	height: 250px;
+	float: left;
+	background-image: url(http://i.cubeupload.com/0L7HIq.png);
+	margin-left: 100px;
+	
+}
+
+.righttext {
+	
+	width: 400px;
+	height: 250px;
+	float: right;
 	
 }
