@@ -1,11 +1,23 @@
 body {
-	
-	background-color:orange;	
+
+	font-family: ;
 	
 }
 
 img {
 	
-	padding-left:50%;
+	text-align: center;
+	
+}
+
+nav ul {
+	
+	list-style:none;
+	
+}
+
+nav ul li {
+	
+	display: inline-block;
 	
 }
