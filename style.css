@@ -32,7 +32,7 @@ nav ul li {
 
 .container {
 	
-	width: 900px;
+	width: 1000px;
 	height: 1000px;
 	margin: auto;
 	background-color: #FF9933;
@@ -76,5 +76,14 @@ p {
 	width: 400px;
 	height: 250px;
 	float: right;
+	
+}
+
+.banner {
+	
+	width: 900px;
+	height: 200px;
+	margin: auto;
+	background-image: url(http://i.cubeupload.com/kXbK11.png);
 	
 }
