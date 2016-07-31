@@ -6,6 +6,13 @@ body {
 	
 }
 
+body, html {
+	
+	height: 100%;
+	min-height:100%;
+	
+}
+
 img {
 	
 	text-align: center;
@@ -33,7 +40,7 @@ nav ul li {
 .container {
 	
 	width: 1000px;
-	height: 1000px;
+	height: 1200px;
 	margin: auto;
 	background-color: #FF9933;
 	padding: 10px;
@@ -85,5 +92,13 @@ p {
 	height: 200px;
 	margin: auto;
 	background-image: url(http://i.cubeupload.com/kXbK11.png);
+	
+}
+
+.thumb {
+	
+	width: 480px;
+	height: 360px;
+	margin: 10px;
 	
 }
