@@ -74,7 +74,7 @@ p {
 	width: 250px;
 	height: 250px;
 	float: left;
-	background-image: url(http://i.cubeupload.com/0L7HIq.png);
+	background-image: url(resources/logo.png);
 	margin-left: 100px;
 	
 }
@@ -92,7 +92,7 @@ p {
 	width: 900px;
 	height: 200px;
 	margin: auto;
-	background-image: url(http://i.cubeupload.com/kXbK11.png);
+	background-image: url(resources/banner.png);
 	
 }
 
