@@ -1,8 +1,14 @@
 @font-face {
-	
+	/* Scream Real font*/
 	font-family: 'Scream Real';
-	font-style: normal;
 	src: url(resources/screamreal.ttf) format(ttf);
+	
+}
+
+@font-face {
+	/* Raleway font */
+	font-family: 'Raleway';
+	src: url(resources/screamreal.ttf) format(ttf);	
 	
 }
 
@@ -12,6 +18,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: 'Raleway';
 	
 }
 
