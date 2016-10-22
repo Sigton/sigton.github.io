@@ -33,3 +33,26 @@ body {
 	background-color: #5cf3c9;
 	
 }
+
+.navigation li {
+	
+	float: left;
+	
+}
+
+.navigation li a {
+	
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+	transition: 0.5s;
+	
+}
+
+.active, .navigation li a:hover {
+	
+	background-color: #377174;
+	
+}
