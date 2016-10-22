@@ -23,3 +23,13 @@ body {
 	margin: auto;
 	
 }
+
+.navigation {
+	
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: #5cf3c9;
+	
+}
