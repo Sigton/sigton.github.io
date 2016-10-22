@@ -12,3 +12,14 @@ body {
 	background-color: #fff;
 	
 }
+
+.container {
+	
+	background-color: #efefef;
+	width: 900px;
+	height: 93%;
+	padding: 0;
+	position: static;
+	margin: auto;
+	
+}
