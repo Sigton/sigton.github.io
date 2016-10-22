@@ -1,12 +1,14 @@
+/* Fonts */
+
 @font-face {
-	/* Scream Real font*/
+
 	font-family: 'Scream Real';
 	src: url(resources/screamreal.ttf) format(ttf);
 	
 }
 
 @font-face {
-	/* Raleway font */
+
 	font-family: 'Raleway';
 	src: url(resources/screamreal.ttf) format(ttf);	
 	
