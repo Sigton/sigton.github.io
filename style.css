@@ -1,7 +1,7 @@
 @font-face {
 
-	font-family: 'Scream Real';
-	src: url(resources/screamreal.ttf) format(ttf);
+	font-family: 'Orion Pax';
+	src: url(resources/orionpax.otf) format(otf);
 	
 }
 
@@ -78,7 +78,7 @@ h1,h2,h3,h4 {
 	
 	text-align:center;
 	padding: 0 5px;
-	font-family: 'Scream Real';
+	font-family: 'Orion Pax';
 	color: white;
 	
 }
