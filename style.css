@@ -1,16 +1,4 @@
-@font-face {
-
-	font-family: 'Orion Pax';
-	src: url(resources/orionpax.otf) format(otf);
-	
-}
-
-@font-face {
-
-	font-family: 'Raleway';
-	src: url(resources/Raleway-Regular.ttf) format(ttf);	
-	
-}
+@import url("fonts.css")
 
 html, body {
 	

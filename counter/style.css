@@ -1,9 +1,4 @@
-@font-face {
-	
-	font-family: 'Raleway';
-	src: url(/resources/Raleway-Regular.ttf);
-	
-}
+@import url("/fonts.css")
 
 html, body {
 	
