@@ -5,6 +5,10 @@
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script href="scripts.js" type="text/javascript">
 			function set_date() {
+			
+				// Set the target date
+				var target = new Date(2017, 0, 22);
+				var targetDay = target.getDate();
 	
 				// Get todays date
 				var date = new Date();
@@ -13,7 +17,7 @@
 				var day = date.getDate();
 	
 				// Calculate the days left
-				var dayDiff = 22 - day;
+				var dayDiff = targetDay - day;
 	
 				// Then update the HTML page
 				document.getElementById('number').innerHTML = dayDiff + " days";
