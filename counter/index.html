@@ -4,23 +4,48 @@
 		<meta charset="utf-8" />
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script href="scripts.js" type="text/javascript">
+		
 			function set_date() {
+			
+				// Some required information
+				var monthsWith31 = [0,2,4,6,7,9,11];
+				var monthsWith30 = [3,5,8,10];
 			
 				// Set the target date
 				var target = new Date(2017, 0, 22);
+				
 				var targetDay = target.getDate();
-	
-				// Get todays date
-				var date = new Date();
+				var targetMonth = target.getMonth();
+				var targetYear = target.getFullYear();
+				
+				// Create an instance of Date
+				var date = new Date()
 	
 				// Get the days, months, etc
 				var day = date.getDate();
+				var month = date.getMonth();
+				var year = date.getFullYear();
 	
 				// Calculate the days left
 				var dayDiff = targetDay - day;
+				var monthDiff = targetMonth - month;
+				
+				if (dayDiff < 0) {
+					if (month in monthsWith31) {
+						dayDiff += 31
+					} else if (month in monthsWith30) {
+						dayDiff += 30;
+					} else {
+						dayDiff += 28;
+					}
+				}
+				
+				if (monthDiff < 0) {
+					monthDiff = (targetMonth + 12) - month;
+				}
 	
 				// Then update the HTML page
-				document.getElementById('number').innerHTML = dayDiff + " days";
+				document.getElementById('number').innerHTML = monthDiff + " months, " + dayDiff + " days";
 			}
 			
 		</script>
