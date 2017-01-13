@@ -2,41 +2,60 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Sigton</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script href="scripts.js" type="text/javascript">
+		
+			function set_date() {
+			
+				// Some required information
+				var monthsWith31 = [0,2,4,6,7,9,11];
+				var monthsWith30 = [3,5,8,10];
+			
+				// Set the target date
+				var target = new Date(2017, 0, 22);
+				
+				var targetDay = target.getDate();
+				var targetMonth = target.getMonth();
+				var targetYear = target.getFullYear();
+				
+				// Create an instance of Date
+				var date = new Date()
+	
+				// Get the days, months, etc
+				var day = date.getDate();
+				var month = date.getMonth();
+				var year = date.getFullYear();
+	
+				// Calculate the days left
+				var dayDiff = targetDay - day;
+				var monthDiff = targetMonth - month;
+				
+				if (dayDiff < 0) {
+					if (month in monthsWith31) {
+						dayDiff += 31
+					} else if (month in monthsWith30) {
+						dayDiff += 30;
+					} else {
+						dayDiff += 28;
+					}
+				}
+				
+				if (monthDiff < 0) {
+					monthDiff = (targetMonth + 12) - month;
+				}
+	
+				// Then update the HTML page
+				document.getElementById('number').innerHTML = monthDiff + " months, " + dayDiff + " days";
+			}
+			
+		</script>
+		<title>How Long Left?</title>
 	</head>
-	<body>
+	<body onload="set_date();">
 		<div class="container">
-			<div class="title">
-				<img src="resources/banner.png" alt="Sigton Web" align="center"><br />
-			</div>
-			<nav>
-				<ul class="navigation">
-					<li><a href="/" class="active">Home</a></li>
-					<li><a href="blog">Blog</a></li>
-					<li><a href="about.html">About Me</a></li>
-					<li><a href="sigton.html">About Sigton</a></li>
-					<li><a href="projects">Projects</a></li>
-				</ul>
-			</nav>
-			<main>
-				<h1>Welcome</h1>
-				<div class="widecontent">Welcome to my new and improved website! My old one was rather outdated and all round pretty terrible,
-				so I've started again from scratch to create something that looks and works well.<br />
-				I'd like to thank the following people for contributing to this website:
-				<ul>
-					<li><a href="https://github.com/joker314/">joker314</a></li>
-					<li><a href="https://github.com/AwesomeMinecrafter94/">AwesomeMinecrafter94</a></li>
-					<li><a href="https://github.com/SilversApprentice/">SilversApprentice</a></li>
-					<li><a href="https://github.com/GreenBayRules/">GreenBayRules</a></li>
-				</ul>
-				If you'd like to contribute, you can fork the repository <a href="https://github.com/Sigton/sigton.github.io">here</a>.
-				</div>
-			</main>
+			<div class="title">Only...</div><br />
+			<div id="number"></div><br />
+			<div class="title">...to go!</div><br />
 		</div>
-		<footer>
-			<div class="footer">Sigton 2016</div>
-		</footer>
 	</body>
 </html>
