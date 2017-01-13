@@ -30,18 +30,21 @@
 				var dayDiff = targetDay - day;
 				var monthDiff = targetMonth - month;
 				
-				if (dayDiff < 0) {
-					if (month in monthsWith31) {
-						dayDiff += 31
-					} else if (month in monthsWith30) {
-						dayDiff += 30;
-					} else {
-						dayDiff += 28;
-					}
-				}
-				
 				if (monthDiff < 0) {
 					monthDiff = (targetMonth + 12) - month;
+				}
+				
+				if (dayDiff < 0) {
+					if (!(monthDiff => 0)) {
+						// Special case if no. of days is more than the target date
+						if (month in monthsWith31) {
+							dayDiff += 31
+						} else if (month in monthsWith30) {
+							dayDiff += 30;
+						} else {
+							dayDiff += 28;
+						}
+					}
 				}
 	
 				// Then update the HTML page
