@@ -46,9 +46,22 @@
 						}
 					}
 				}
+				
+				// Create the string
+				if (monthDiff == 1) {
+					if (dayDiff == 1) {
+						string = monthDiff + " month, " + dayDiff + " day";
+					} else {
+						string = monthDiff + " month, " + dayDiff + " days";
+					}				
+				} else if (dayDiff == 1) {
+					string = monthDiff + " months, " + dayDiff + " day";
+				}	else {
+					string = monthDiff + " months, " + dayDiff + " days";
+				}
 	
 				// Then update the HTML page
-				document.getElementById('number').innerHTML = monthDiff + " months, " + dayDiff + " days";
+				document.getElementById('number').innerHTML = string;
 			}
 			
 		</script>
