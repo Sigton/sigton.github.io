@@ -19,8 +19,14 @@ html, body {
 	
 }
 
-div {
+.title {
 	
 	font-size: 36px;
+	
+}
+
+h1 {
+	
+	font-size: 72px;
 	
 }
