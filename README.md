@@ -6,3 +6,5 @@ Thanks to the following people for helping out:
 - AwesomeMinecrafter94
 - SilversApprentice
 - GreenBayRules
+- DucklingCake
+- banana439monkey
