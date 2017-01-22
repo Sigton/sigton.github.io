@@ -35,16 +35,14 @@
 				}
 				
 				if (dayDiff < 0) {
-					if (!(monthDiff => 0)) {
-						// Special case if no. of days is more than the target date
-						if (month in monthsWith31) {
-							dayDiff += 31
-						} else if (month in monthsWith30) {
-							dayDiff += 30;
-						} else {
-							dayDiff += 28;
-						}
+					if (month in monthsWith31) {
+						dayDiff += 31
+					} else if (month in monthsWith30) {
+						dayDiff += 30;
+					} else {
+						dayDiff += 28;
 					}
+					monthDiff -= 1
 				}
 				
 				// Create the string
