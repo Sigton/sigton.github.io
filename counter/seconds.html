@@ -3,14 +3,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<link href="style.css" rel="stylesheet" type="text/css" />
-		<script src="../brython.js"></script>
+		<script type="text/javascript">
+		function counter() {
+			var target_date = new Date(2017, 3, 22).getTime() / 1000;
+			
+			window.setInterval(function () {
+				var date = new Date()
+				var current_date = date.getTime() / 1000;
+			
+				var difference = target_date - current_date
+				document.getElementById('number').innerHTML = Math.floor(difference);
+			}, 1000);
+		}
+		</script>
 		<title>Counter</title>
 	</head>
-	<body onload="brython()">
-	<script type="text/python">
-	from browser import document
-	import datetime
-	</script>
+	<body onload="counter()">
 	<div class="container">
 		<h1>How Long Left?</h1><br />
 		<div class="title">Only...</div><br />
