@@ -3,10 +3,19 @@
 	<head>
 		<meta charset="utf-8" />
 		<link href="style.css" rel="stylesheet" type="text/css" />
-		<script src="/brython.js"></script>
+		<script src="../brython.js"></script>
 		<title>Counter</title>
 	</head>
 	<body onload="brython()">
-	<script src="counter.py" type="text/python"></script>
+	<script type="text/python">
+	from browser import document
+	import datetime
+	</script>
+	<div class="container">
+		<h1>How Long Left?</h1><br />
+		<div class="title">Only...</div><br />
+		<div id="number"></div><br />
+		<div class="title">...seconds to go!</div>
+	</div>
 	</body>
 </html>
