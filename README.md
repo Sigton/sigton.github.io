@@ -8,3 +8,4 @@ Thanks to the following people for helping out:
 - GreenBayRules
 - DucklingCake
 - banana439monkey
+- CosmicWebServices
