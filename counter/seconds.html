@@ -4,21 +4,24 @@
 		<meta charset="utf-8" />
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
+		
+		function update() {
+			window.setInterval(counter, 1000);
+		}
+		
 		function counter() {
 			var target_date = new Date(2017, 3, 22).getTime() / 1000;
 			
-			window.setInterval(function () {
-				var date = new Date()
-				var current_date = date.getTime() / 1000;
+			var date = new Date()
+			var current_date = date.getTime() / 1000;
 			
-				var difference = target_date - current_date
-				document.getElementById('number').innerHTML = Math.floor(difference);
-			}, 1000);
+			var difference = target_date - current_date
+			document.getElementById('number').innerHTML = Math.floor(difference);
 		}
 		</script>
 		<title>Counter</title>
 	</head>
-	<body onload="counter()">
+	<body onload="update()">
 	<div class="container">
 		<h1>How Long Left?</h1><br />
 		<div class="title">Only...</div><br />
