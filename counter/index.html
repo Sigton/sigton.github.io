@@ -5,6 +5,12 @@
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script href="scripts.js" type="text/javascript">
 		
+			// Simple function for rounding numbers to n decimals
+			function round_number(num, dec) {
+				return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+			}
+			
+		
 			function set_date() {
 			
 				// Some required information
@@ -62,19 +68,58 @@
 				document.getElementById('number').innerHTML = string;
 			}
 			
+			function second_counter() {
+				var target_date = new Date(2017, 3, 22).getTime() / 1000;
+				
+				var date = new Date()
+				var current_date = date.getTime() / 1000;
+				
+				var difference = target_date - current_date
+				document.getElementById('seconds').innerHTML = Math.floor(difference);
+			}
+			
+			function percent_counter() {
+				var start_date = new Date(2017, 0, 23).getTime() / 1000;
+				var target_date = new Date(2017, 3, 22).getTime() / 1000;
+				
+				var total_time = Math.floor(target_date - start_date);
+				
+				var date = new Date();
+				var current_time = date.getTime() / 1000;
+				
+				var time_passed = Math.floor(current_time - start_date);
+				
+				var percentage = (time_passed / total_time) * 100;
+				document.getElementById('percent').innerHTML = round_number(percentage, 8) + "%";
+			}
+			
+			function update() {
+				window.setInterval(function (){
+				
+					set_date();
+					second_counter();
+					percent_counter();
+				
+				}, 1000);
+			}
+			
 		</script>
 		<title>Counter</title>
 	</head>
-	<body onload="set_date();">
+	<body onload="update();">
 		<div class="container">
 			<h1>How Long Left?</h1><br />
 			<div class="title">Only...</div><br />
 			<div class="title" id="number"></div><br />
 			<div class="title">...to go!</div><br />
-			<br />
-			<div class="text">So, I hear you're wondering what this timer is about? A lot of people wonder, and a lot less people know. <br />
-			All you've got to know is that it'll be a fantastic day, and that there's not long to go.</div><br />
-			<div class="text"><a href="seconds.html">Want to know how many seconds are left?</a></div>
+			<br /><br />
+			<div class="title">Only...</div><br />
+			<div class="title" id="seconds"></div><br />
+			<div class="title">...seconds to go!</div>
+			<br /><br />
+			<div class="title">So far...</div><br />
+			<div class="title" id="percent"></div><br />
+			<div class="title">...has been waited!</div>
 		</div>
 	</body>
 </html>
